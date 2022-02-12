@@ -45,6 +45,7 @@ Future<int> _run(List<String> args) async {
 
     // look at analysis_options.yaml
     result = await Process.run('flutter', ['analyze']);
+    print(result.stdout);
     return result.exitCode;
   } catch (e) {
     print(e);
